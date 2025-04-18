@@ -1,0 +1,9 @@
+# dirs
+__pycache__/
+archive/
+.venv/
+.vscode/
+
+# files
+.env
+.DS_*

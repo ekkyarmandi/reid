@@ -1,0 +1,7 @@
+site_name: REID Data Scraping Documentation
+theme:
+  name: material
+nav:
+  - Overview: index.md
+  - How to use: how-to-use.md
+  - Development: development.md
