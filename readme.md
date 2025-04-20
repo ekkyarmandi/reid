@@ -82,13 +82,3 @@ ITEM_PIPELINES = {
 The database is used to store the processed data. It includes models such as `RawData`, `Property`, `Listing`, `Error`, and `Report`. The pipelines interact with the database to add, update, and delete records as necessary.
 
 The integration of these components allows for efficient data scraping, processing, and storage, ensuring that the property data is accurately captured and maintained.
-
-### Extractors (Custom Command)
-
-The `extractors` folder contains custom commands for extracting data from the `RawData` model. It uses the same `PropertyItem` class to represent the data model for properties. But it for debugging and data scraping fix purposes.
-
-Extractor command:
-
-```bash
-scrapy extract <spider_name>
-```

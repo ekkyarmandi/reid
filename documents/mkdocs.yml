@@ -3,5 +3,8 @@ theme:
   name: material
 nav:
   - Overview: index.md
+  - How it work: how-it-work.md
   - How to use: how-to-use.md
   - Development: development.md
+plugins:
+  - mermaid2
