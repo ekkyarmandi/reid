@@ -6,5 +6,6 @@ nav:
   - How it work: how-it-work.md
   - How to use: how-to-use.md
   - Development: development.md
+  - Work with Captcha: passing-captcha.md
 plugins:
   - mermaid2

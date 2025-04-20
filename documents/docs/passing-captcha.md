@@ -15,6 +15,12 @@ Two spiders, `balihomeimmo` and `balirealty`, are protected by Cloudflare's CAPT
     - Copy the obtained `cf_clearance` value for Bali Realty into the `BALIREALTY_COOKIES` variable in your `.env` file.
     - **Crucially**, copy the `User-Agent` string provided by the `CF-Clearance-Scraper` tool into the `USER_AGENT` variable in your `.env` file. The user agent used to get the cookie _must_ match the user agent used by the scraper.
 
+      2.1. **Test the Cookies (Optional but Recommended):**
+
+    - Before running the full spider, you can verify your `cf_clearance` cookie and `User-Agent` in the `.env` file are working correctly.
+    - Run `python reid/balihomeimmo_test.py` to test the Bali Home Immo configuration. - Run `python reid/balirealty_test.py` to test the Bali Realty configuration.
+    - A successful test should typically print a `200` status code and the title of the test page, indicating Cloudflare access was granted.
+
 3.  **Local Execution:**
 
     - These two spiders _must_ be run locally. The `cf_clearance` cookie is tied to the IP address and user agent used to obtain it, making it incompatible with the standard cloud-based proxy setup.
@@ -23,9 +29,9 @@ Two spiders, `balihomeimmo` and `balirealty`, are protected by Cloudflare's CAPT
 
     - Before running `balihomeimmo` or `balirealty` locally, you need to disable the proxy middleware in `reid/settings.py`.
     - Comment out the following lines within the `DOWNLOADER_MIDDLEWARES` dictionary:
-      ```python
-      # "scrapy_proxies.RandomProxy": 200,
-      # "scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware": 300,
+      ```
+        #"scrapy_proxies.RandomProxy": 200,
+        #"scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware": 300,
       ```
 
 5.  **Local Database:**
