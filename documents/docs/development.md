@@ -12,7 +12,7 @@ This section covers how to set up a local development environment, understand th
 
 ```bash
 # 1. Clone & enter repo
-git clone https://github.com/ekkyarmandi/reid && cd reid
+git clone https://github.com/ekkyarmandi/reid.git && cd reid
 
 # 2. Create & activate venv
 python3 -m venv .venv
