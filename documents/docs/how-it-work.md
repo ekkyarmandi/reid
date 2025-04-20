@@ -20,11 +20,12 @@ bash start_scraping.sh
 
 each configured Scrapy spider is executed in sequence. For example:
 
-```bash
+```
 scrapy crawl ubudproperty
 scrapy crawl unrealbali
-...
 ```
+
+Use `scrapy list` to see all available spiders.
 
 ## Spiders
 
@@ -90,4 +91,4 @@ The project uses SQLAlchemy models:
 - `Error`: Scraping or processing errors.
 - `Report`: Crawl statistics per spider run.
 
-Pipelines commit data to the database via SQLAlchemy sessions.
+Pipelines commit data to the database via SQLAlchemy sessions. See [Development](development.md) for more details about the database models.
